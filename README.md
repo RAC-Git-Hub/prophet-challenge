@@ -137,5 +137,4 @@ Although this project was done individually, the skillset used to complete this
 assignment is a culmination of knowledge learned in the classroom setting which
 includes lecture materials, example programming from instructors, interactive
 dialogue in group settings among fellow students, independent internet research,
-project-specific API documentation resources, and some general programming
-guidance from sources such as CoPilot and ChatGPT. 
+and some general programming guidance from sources such as CoPilot and ChatGPT. 
