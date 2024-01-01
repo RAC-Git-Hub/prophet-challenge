@@ -42,6 +42,7 @@ repository again after completing the challenge.
 >![8-1_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-1_output.png?raw=true)
 >
 >Do any unusual patterns exist?
+>
 >   2. Calculate the total search traffic for the month, and then compare the
 >   value to the monthly median across all months.
 >   3. Did the Google search traffic increase during the month that MercadoLibre
