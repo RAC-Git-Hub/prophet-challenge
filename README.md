@@ -65,19 +65,22 @@ repository again after completing the challenge.
 >
 >   Does the search traffic peak at a particular time of day or is it
 >   relatively consistent?
+>
 >   2. Group the hourly search data to plot the average traffic by the day of
 >   the week (for example, Monday vs. Friday).
 >
 >![8-3_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-3_output.png?raw=true)
 >
 >   Does the search traffic get busiest on any particular day of the week?
+>
 >   3. Group the hourly search data to plot the average traffic by the week of
 >   the year. 
 >
->![8-4_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-4_output.png?raw=true)>
+>![8-4_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-4_output.png?raw=true)
 >
 >Does the search traffic tend to increase during the winter holiday
 >   period (weeks 40 through 52)?
+>
 >   4. Are there any time based trends that you can see in the data? Write your
 >   answer in the space provided in the starter file.
 >
@@ -95,11 +98,12 @@ repository again after completing the challenge.
 >   customers and revenue increased for e-commerce platforms. Slice the data to
 >   just the first half of 2020 ( 2020-01 to 2020-06 in the DataFrame), and then
 >   plot the data. 
-
-
-
-Do both time series indicate a common trend that’s consistent
+>
+>![8-5_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-5_output.png?raw=true)
+>
+>   Do both time series indicate a common trend that’s consistent
 >   with this narrative?
+>
 >   3. Create a new column in the DataFrame named “Lagged Search Trends” that
 >   offsets, or shifts, the search traffic by one hour. Create two additional
 >   columns:
@@ -124,67 +128,6 @@ Do both time series indicate a common trend that’s consistent
 >-  What time of day exhibits the greatest popularity?
 >-  Which day of the week gets the most search traffic?
 >-  What's the lowest point for search traffic in the calendar year?
-
-
-
->![Photo_6_001](https://github.com/RAC-Git-Hub/data-sourcing-challenge/blob/main/Photo_6_001.png)
->
->
->2. Create an empty list called reviews_list to store the reviews you retrieve
->   from the API.
->3. The Article Search API limits results to 10 per page, but we want to try to
->   retrieve 200. To do this, create a for loop to loop through 20 pages
->   (starting from page 0). Inside the loop, perform the following actions:
->-  Extend the query_url created in Step 1 to include the page parameter.
->-  Make a GET request to retrieve the page of results, and store the JSON data
->   in a variable called reviews.
->-  Add a 12-second interval between queries to stay within API query limits.
->
->   **Important:** The New York Times limits requests to 500 per day and 5 per
->   minute.
->-  Write a try-except clause that performs the following actions:
->       *   try : loop through the reviews["response"]["docs"] and append each
->       review to the list, then print out the query page number (i.e. the
->       *   number of times the loop has executed).
->       *   except : Print the page number that had no results then break from
->       the loop.
->
->       **Note:** If your loop breaks at the except clause, it is possible you
->       have tried to make a request that fell outside of the rate limit. You
->       should be able to loop through all 20 pages with the provided query
->       parameters.
->4. Preview the first five results in JSON format using json.dumps with the
->   argument indent=4 to format the data.
->5. Convert reviews_list to a Pandas DataFrame using json_normalize()
->6. Extract the movie title from the "headline.main" column and save it to a new
->   column "title" . To do this, you will use the Pandas apply() method and the
->   following lambda function:
->
->
->![Photo_6_002](https://github.com/RAC-Git-Hub/data-sourcing-challenge/blob/main/Photo_6_002.png)
->
->
->This code takes the string in the cell and extracts the characters between the
->unicode quotation marks, as long as a space and the word "Review" follows the
->closing quotation mark.
->
->7. Use the supplied extract_keywords function to convert the "keywords" column
->   from a list of dictionaries to strings using the apply() method.
->8. Create a list called titles from the "title" column using to_list() . These
->   titles will be used in the query for The Movie Database.
->### Part 2: Access The Movie Database API
->Consult the Search & Query for Details documentation
->(https://developer.themoviedb.org/docs/search-and-query-for-details) to build
->your query URLs. You will be making both types of requests to extract all of
->the details you need:
->-  The search query is used to find the movie ID from the search by title. Most
->   of this query is included in your starter code, as follows, but you will
->   need to include the movie title in the query.
->
->
->![Photo_6_003](https://github.com/RAC-Git-Hub/data-sourcing-challenge/blob/main/Photo_6_003.png)
->
-
 >
 ## Sources
 The starter codes were obtained in December 2023 from the instructional staff of
