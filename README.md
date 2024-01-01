@@ -8,7 +8,7 @@ this, you need to find out if there is an ability to predict Google internet
 search traffic and if that data can be used to successfully trade the company's
 stock.
 
-The process of this exercise should be accomplished in four steps:
+The process of this exercise shall be accomplished in following four steps:
 >-  Step 1: Find unusual patterns in hourly Google search traffic.
 >-  Step 2: Mine the search traffic data for seasonality.
 >-  Step 3: Relate the search traffic to stock price patterns.
@@ -36,9 +36,12 @@ repository again after completing the challenge.
 >
 >   To do so, complete the following steps:
 >   1. Read the search data into a DataFrame, and then slice the data to just
->   the month of May 2020. (During this month,  MercadoLibre released its
->   quarterly financial results.) Visualize the results. Do any unusual patterns
->   exist?
+>   the month of May 2020. (During this month, MercadoLibre released its
+>   quarterly financial results.) Visualize the results.
+> 
+>![8-1_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-1_output.png?raw=true)
+>
+>Do any unusual patterns exist?
 >   2. Calculate the total search traffic for the month, and then compare the
 >   value to the monthly median across all months.
 >   3. Did the Google search traffic increase during the month that MercadoLibre
@@ -165,67 +168,7 @@ repository again after completing the challenge.
 >
 >![Photo_6_003](https://github.com/RAC-Git-Hub/data-sourcing-challenge/blob/main/Photo_6_003.png)
 >
->
->-  The movie query is made once you have the movie ID.
->
->
->You will use the titles list created in Part 1 to perform your queries with The
->Movie Database.
->1. Create an empty list called tmdb_movies_list to store the results from your
->API requests. This will contain a list of dictionaries.
->2. Create a variable called request_counter and initialize it with the value of
->1 . This counter should do the following:
->-  Increment by one every time you iterate through the titles list.
->-  Use time.sleep(1) when it reaches a multiple of 50.
->-  Print a message to indicate that the application is sleeping.
->3. Loop through the titles list created from the movie reviews DataFrame, and
->perform the following actions:
->-  Perform the actions outlined in Step 2.
->-  Perform a GET request that sends the title to The Movie Database search and
->   retrieves the JSON results.
->-  Use a try clause that performs the following actions:
->       *    Collect the movie ID from the first result.
->       *    Make a GET request using the movie query (starting with
->       https://api.themoviedb.org/3/movie/ ) and movie ID to retrieve the full
->       movie details in JSON format.
->       *    Extract the genre names from the results into a list called
->       genres.
->       *    Extract the spoken_languages' English name from the results
->       into a list called spoken_languages.
->       *    Extract the production_countries' name from the results into a
->       list called production_countries.
->       *    Create a dictionary with the following results: title,
->       original_title, budget, original_language, homepage, overview,
->       popularity, runtime, revenue, release_date, vote_average, vote_count, as
->       well as the genres, spoken_languages, and production_countries lists you
->       just created.
->       *    Append this dictionary to tmdb_movies_list.
->       *    Print out the name of the movie and a message to indicate that
->       the title was found.
->
->-  Use the except clause to print out a statement if a movie is not found.
->4. Preview the first five results in JSON format using json.dumps with the
->argument indent=4 to format the data.
->5. Convert the results to a DataFrame called tmdb_df with pd.DataFrame() . You
->don't need to use json_normalize() this time because we don't have nested
->objects.
->### Part 3: Merge and Clean the Data for Export
->Now that you have collected the data from both APIs, you need to merge the two
->DataFrames and clean the data, then export it for future use.
->1. Merge the New York Times reviews and TMDB DataFrames on the title column.
->2. The genres, spoken_languages, and production_countries columns were saved as
->lists, but we want the columns to be strings without the list characters ( [ ,
->] , and ' ). To fix these columns, perform the following actions:
->-  Create a list of the columns that need fixing called columns_to_fix.
->-  Create a list of characters to remove called characters_to_remove.
->-  Loop through columns_to_fix and do the following:
->       *   Use astype() to convert the column to a string.
->       *   Loop through the characters_to_remove and use the Pandas
->       str.replace() method to remove the character from the string.
->-  Print the head of the updated DataFrame to confirm the list characters were
->removed.
->3. Delete any duplicate rows and reset the index.
->4. Export data to a CSV file without the DataFrame's index.
+
 >
 ## Sources
 The starter codes were obtained in December 2023 from the instructional staff of
