@@ -59,13 +59,24 @@ repository again after completing the challenge.
 >To that end, you want to mine the search traffic data for predictable seasonal
 >patterns of interest in the company. To do so, complete the following steps:
 >   1. Group the hourly search data to plot the average traffic by the hour of
->   day. Does the search traffic peak at a particular time of day or is it
+>   day. 
+>
+>![8-2_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-2_output.png?raw=true)
+>
+>   Does the search traffic peak at a particular time of day or is it
 >   relatively consistent?
 >   2. Group the hourly search data to plot the average traffic by the day of
->   the week (for example, Monday vs. Friday). Does the search traffic get
->   busiest on any particular day of the week?
+>   the week (for example, Monday vs. Friday).
+>
+>![8-3_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-3_output.png?raw=true)
+>
+>   Does the search traffic get busiest on any particular day of the week?
 >   3. Group the hourly search data to plot the average traffic by the week of
->   the year. Does the search traffic tend to increase during the winter holiday
+>   the year. 
+>
+>![8-4_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-4_output.png?raw=true)>
+>
+>Does the search traffic tend to increase during the winter holiday
 >   period (weeks 40 through 52)?
 >   4. Are there any time based trends that you can see in the data? Write your
 >   answer in the space provided in the starter file.
@@ -83,7 +94,11 @@ repository again after completing the challenge.
 >   difficult. But, after the initial shock to global financial markets, new
 >   customers and revenue increased for e-commerce platforms. Slice the data to
 >   just the first half of 2020 ( 2020-01 to 2020-06 in the DataFrame), and then
->   plot the data. Do both time series indicate a common trend that’s consistent
+>   plot the data. 
+
+
+
+Do both time series indicate a common trend that’s consistent
 >   with this narrative?
 >   3. Create a new column in the DataFrame named “Lagged Search Trends” that
 >   offsets, or shifts, the search traffic by one hour. Create two additional
