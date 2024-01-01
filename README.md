@@ -39,9 +39,9 @@ repository again after completing the challenge.
 >   the month of May 2020. (During this month,  MercadoLibre released its
 >   quarterly financial results.) Visualize the results. Do any unusual patterns
 >   exist?
->-  2. Calculate the total search traffic for the month, and then compare the
+>   2. Calculate the total search traffic for the month, and then compare the
 >   value to the monthly median across all months.
->-  3. Did the Google search traffic increase during the month that MercadoLibre
+>   3. Did the Google search traffic increase during the month that MercadoLibre
 >   released its financial results? Write your answer in the space provided in
 >   the starter file.
 >
@@ -65,15 +65,49 @@ repository again after completing the challenge.
 >   period (weeks 40 through 52)?
 >   4. Are there any time based trends that you can see in the data? Write your
 >   answer in the space provided in the starter file.
+>
+>#### Step 3: Relate the Search Traffic to Stock Price Patterns
+>You mention your work on the search traffic data during a meeting with people
+>in the finance group at the company. They want to know if any relationship
+>between the search data and the company stock price exists, and they ask if you
+>can investigate.
+>
+>To do so, complete the following steps:
+>   1. Read in and plot the stock price data. Concatenate the stock price data
+>   to the search data in a single DataFrame.
+>   2. Market events emerged during the year of 2020 that many companies found
+>   difficult. But, after the initial shock to global financial markets, new
+>   customers and revenue increased for e-commerce platforms. Slice the data to
+>   just the first half of 2020 ( 2020-01 to 2020-06 in the DataFrame), and then
+>   plot the data. Do both time series indicate a common trend that’s consistent
+>   with this narrative?
+>   3. Create a new column in the DataFrame named “Lagged Search Trends” that
+>   offsets, or shifts, the search traffic by one hour. Create two additional
+>   columns:
+>-  “Stock Volatility”, which holds an exponentially weighted four-hour rolling
+>   average of the company’s stock volatility
+>
+>-  “Hourly Stock Return”, which holds the percent change of the company's stock
+>   price on an hourly basis
+>
+>   4. Does a predictable relationship exist between the lagged search traffic
+>   and the stock volatility or between the lagged search traffic and the stock
+>   price returns? Write your answer in the space provided in the starter file.
+>
+>#### Step 4: Create a Time Series Model with Prophet
+>Now, you need to produce a time series model that analyzes and forecasts
+>patterns in the hourly search data. To do so, complete the following steps:
+>   1. Set up the Google search data for a Prophet forecasting model.
+>   2. After estimating the model, plot the forecast. How's the near-term
+>   forecast for the popularity of MercadoLibre?
+>   3. Plot the individual time series components of the model to answer the
+>   following questions in the space provided in the starter file:
+>-  What time of day exhibits the greatest popularity?
+>-  Which day of the week gets the most search traffic?
+>-  What's the lowest point for search traffic in the calendar year?
 
->1. The base URL is included in the starter code, along with the search string
->and query dates. Consult the New York Times Article Search API documentation
->(https://developer.nytimes.com/docs/articlesearch-product/1/overview) to help
->you build your query_url using these variables.
->
->If you accidentally delete these variables, they are:
->
->
+
+
 >![Photo_6_001](https://github.com/RAC-Git-Hub/data-sourcing-challenge/blob/main/Photo_6_001.png)
 >
 >
