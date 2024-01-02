@@ -24,8 +24,10 @@ account. Then take the following steps:
 >   downloads.
 >-  Push these changes to GitHub or GitLab.
 >
->You will use Google Colab to complete this challenge; make sure to download your notebook file and place it in your
-repository again after completing the challenge.
+>You will use Google Colab to complete this challenge; make sure to download
+>your notebook file and place it in your repository again after completing the
+>challenge.
+>
 >### Instructions
 >#### Step 1: Find Unusual Patterns in Hourly Google Search Traffic
 >The data science manager asks if the Google search traffic for the company
