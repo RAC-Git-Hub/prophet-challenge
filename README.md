@@ -121,10 +121,17 @@ repository again after completing the challenge.
 >Now, you need to produce a time series model that analyzes and forecasts
 >patterns in the hourly search data. To do so, complete the following steps:
 >   1. Set up the Google search data for a Prophet forecasting model.
->   2. After estimating the model, plot the forecast. How's the near-term
->   forecast for the popularity of MercadoLibre?
+>   2. After estimating the model, plot the forecast. 
+>
+>![8-6_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-6_output.png?raw=true)
+>
+>   How's the near-term forecast for the popularity of MercadoLibre?
+>
 >   3. Plot the individual time series components of the model to answer the
 >   following questions in the space provided in the starter file:
+>
+>![8-7_output](https://github.com/RAC-Git-Hub/prophet-challenge/blob/main/8-7_output.png?raw=true)
+>
 >-  What time of day exhibits the greatest popularity?
 >-  Which day of the week gets the most search traffic?
 >-  What's the lowest point for search traffic in the calendar year?
